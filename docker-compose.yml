@@ -1,0 +1,31 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      ARTIFACTS_DIR: /app/artifacts
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+
+  trainer:
+    build: .
+    command:
+      [
+        "python",
+        "-m",
+        "stock_lstm.train",
+        "--symbol",
+        "AAPL",
+        "--start",
+        "2018-01-01",
+        "--lookback",
+        "60",
+        "--epochs",
+        "50",
+        "--artifacts-dir",
+        "/app/artifacts"
+      ]
+    volumes:
+      - ./artifacts:/app/artifacts
+
