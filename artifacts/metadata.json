@@ -26,7 +26,7 @@
   },
   "symbol": "AAPL",
   "target_column": "Close",
-  "trained_at_utc": "2026-05-20T20:25:42.187888+00:00",
+  "trained_at_utc": "2026-05-20T20:51:57.343818+00:00",
   "training_config": {
     "batch_size": 64,
     "epochs": 50,

@@ -48,7 +48,7 @@ pip install -e ".[dev]"
 Treine o modelo:
 
 ```powershell
-python -m stock_lstm.train --symbol AAPL --start 2018-01-01 --lookback 60 --epochs 50
+python -m stock_lstm.train --symbol AAPL --start 2018-01-01 --lookback 60 --epochs 50 --patience 8 --batch-size 64
 ```
 
 Ao final, os artefatos serao salvos em `artifacts/`:
@@ -58,7 +58,7 @@ Ao final, os artefatos serao salvos em `artifacts/`:
 - `metadata.json`
 - `metrics.json`
 
-Este repositorio ja inclui artefatos treinados para `AAPL`, permitindo subir a API diretamente depois de instalar as dependencias ou construir a imagem Docker.
+Este repositorio ja inclui artefatos treinados para `AAPL` (ultimo treino: 2026-05-20, early stopping no 14° epoch), permitindo subir a API diretamente depois de instalar as dependencias ou construir a imagem Docker.
 
 Suba a API:
 
@@ -89,8 +89,8 @@ Ou envie diretamente os fechamentos historicos:
 {
   "horizon": 3,
   "prices": [
-    {"date": "2026-05-14", "close": 189.12},
-    {"date": "2026-05-15", "close": 190.33}
+    {"date": "2026-05-19", "close": 189.12},
+    {"date": "2026-05-20", "close": 190.33}
   ]
 }
 ```
