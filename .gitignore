@@ -6,7 +6,6 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 
-artifacts/
 data/raw/
 data/processed/
 logs/

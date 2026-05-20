@@ -16,9 +16,8 @@ COPY src ./src
 RUN python -m pip install --upgrade pip \
     && pip install --no-cache-dir .
 
-RUN mkdir -p /app/artifacts
+COPY artifacts ./artifacts
 
 EXPOSE 8000
 
 CMD ["uvicorn", "stock_lstm.api:app", "--host", "0.0.0.0", "--port", "8000"]
-

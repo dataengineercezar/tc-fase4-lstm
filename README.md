@@ -58,6 +58,8 @@ Ao final, os artefatos serao salvos em `artifacts/`:
 - `metadata.json`
 - `metrics.json`
 
+Este repositorio ja inclui artefatos treinados para `AAPL`, permitindo subir a API diretamente depois de instalar as dependencias ou construir a imagem Docker.
+
 Suba a API:
 
 ```powershell

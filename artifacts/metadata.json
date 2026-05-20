@@ -1,0 +1,37 @@
+{
+  "data_config": {
+    "artifacts_dir": "artifacts",
+    "end_date": null,
+    "horizon": 1,
+    "lookback": 60,
+    "start_date": "2018-01-01",
+    "symbol": "AAPL",
+    "target_column": "Close",
+    "test_ratio": 0.15,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15
+  },
+  "horizon": 1,
+  "last_observed_date": "2026-05-20",
+  "lookback": 60,
+  "model_config": {
+    "dropout": 0.2,
+    "hidden_size": 64,
+    "num_layers": 2
+  },
+  "rows": {
+    "test_sequences": 317,
+    "train_sequences": 1414,
+    "validation_sequences": 316
+  },
+  "symbol": "AAPL",
+  "target_column": "Close",
+  "trained_at_utc": "2026-05-20T20:25:42.187888+00:00",
+  "training_config": {
+    "batch_size": 64,
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "patience": 8,
+    "seed": 42
+  }
+}
